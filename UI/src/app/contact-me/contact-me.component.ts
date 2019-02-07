@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup, FormArray, Validators} from '@angular/forms';
+import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-contact-me',
@@ -16,9 +16,8 @@ export class ContactMeComponent implements OnInit
   {
     this.formGroup= this._formBuilder.group({
       formArray: this._formBuilder.array([
-        this._formBuilder.group({          
-       }),
-       this._formBuilder.group({
+        this._formBuilder.group({
+          fullName: new FormControl('')
        }),
        this._formBuilder.group({
        }),
@@ -28,5 +27,9 @@ export class ContactMeComponent implements OnInit
     });
   }
 
+  submitHireMe(data)
+  {
+    alert(data);
+  }
 
 }
