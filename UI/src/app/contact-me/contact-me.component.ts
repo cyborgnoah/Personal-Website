@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import {FormBuilder, FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-contact-me',
@@ -17,11 +17,20 @@ export class ContactMeComponent implements OnInit
     this.formGroup= this._formBuilder.group({
       formArray: this._formBuilder.array([
         this._formBuilder.group({
-          fullName: new FormControl('')
+          fullName:'',
+          designation:'',
+          mobile_number:'',
+          email:''
        }),
        this._formBuilder.group({
+         company_name:'',
+         company_url:''
        }),
        this._formBuilder.group({
+         role:'',
+         skill:'',
+         ctc:'',
+         brief:''
        })
       ])
     });
@@ -29,7 +38,18 @@ export class ContactMeComponent implements OnInit
 
   submitHireMe(data)
   {
-    alert(data);
+  /*this.db.collections('contact-hire-me').add({
+    name: data.formArray[0].fullName,
+    designation: data.formArray[0].designation,
+    mobile_number: data.formArray[0].mobile_number,
+    email: data.formArray[0].email,
+    company_name: data.formArray[1].company_name,
+    company_url: data.formArray[1].company_url,
+    role: data.formArray[2].role,
+    skill: data.formArray[2].skill,
+    ctc: data.formArray[2].ctc,
+    brief: data.formArray[2].brief
+  });*/
   }
 
 }

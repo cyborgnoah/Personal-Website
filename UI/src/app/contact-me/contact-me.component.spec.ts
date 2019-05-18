@@ -8,13 +8,13 @@ describe('ContactMeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ConactMeComponent ]
+      declarations: [ ContactMeComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ConactMeComponent);
+    fixture = TestBed.createComponent(ContactMeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
